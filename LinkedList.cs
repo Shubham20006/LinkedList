@@ -16,33 +16,34 @@ namespace LinkedListProgram
             Node node = new Node(data);
             if (head == null)
             {
-                head = node;
+                head= node;
             }
             else
             {
-                Node temp = head;
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = node;
+                Node temp = new Node(data);
+               
+                temp.next = head;
+                head = temp;
             }
             Console.WriteLine("{0} inserted into linkedlist",node.data);
         }
         public void Display()
         {
-            Node temp = head;
-            if (head == null)
+            Node temp=head;
+            if (temp == null)
             {
                 Console.WriteLine("linkedlist is empty");
                 return;
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data);
+                Console.Write(temp.data);
                 temp = temp.next;
+                if (temp != null)
+                {
+                    Console.Write("->");
+                }
             }
-
         }
 
     }
