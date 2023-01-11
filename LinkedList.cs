@@ -97,11 +97,22 @@ namespace LinkedListProgram
                 }
                 if (temp.next.next == null)
                 {
-                    temp.next = null;
+                    temp.next=null;
                 }
                   Console.WriteLine("\nThe linkedlist is modified");
             }
 
+        }
+        public void size()
+        {
+            Node temp = head;
+            int count = 0;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            Console.WriteLine("\nsize= "+count);
         }
         public void MsTest(int x)
         {

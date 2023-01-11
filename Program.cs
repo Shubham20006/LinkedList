@@ -20,11 +20,16 @@ namespace LinkedListProgram
             list.Display();
             Console.WriteLine();
 
-            //list.poplast();
-            //list.Display();
-
             list.MsTest(30);
             list.Display();
+            Console.WriteLine();
+            list.poplast();
+            list.Display();
+            list.poplast();
+            list.Display();
+            list.InsertAtPerticularPosition(2, 70);
+            list.Display();
+            list.size();
             Console.ReadLine();
         }
     }
