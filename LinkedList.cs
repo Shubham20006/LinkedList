@@ -20,10 +20,12 @@ namespace LinkedListProgram
             }
             else
             {
-                Node temp = new Node(data);
-               
-                temp.next = head;
-                head = temp;
+                Node temp = head;
+               while(temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;                
             }
             Console.WriteLine("{0} inserted into linkedlist",node.data);
         }
