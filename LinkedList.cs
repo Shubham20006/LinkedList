@@ -101,6 +101,27 @@ namespace LinkedListProgram
             }
 
         }
+        public void MsTest(int x)
+        {
+            Node temp = head;
+
+            while (temp != null)
+            {
+
+                if (temp.data == x)
+                {
+                    Console.WriteLine(temp.data +"==" + x+"(True)");
+                }
+             else
+                {
+                    Console.WriteLine(temp.data + "!=" + x);
+                }
+                temp = temp.next;
+            }
+            
+                
+            
+        }  
         public void Display()
         {
             Node temp = head;

@@ -12,12 +12,17 @@ namespace LinkedListProgram
         {
             LinkedList list = new LinkedList();
             list.Add(56);
-           list.Add(30);
+            list.Add(30);
             list.Add(70);
             list.Display();
-           //list.InsertAtPerticularPosition(2,30);
+            Console.WriteLine();
+            //list.InsertAtPerticularPosition(2,30);
             //list.Display();
-           list.poplast();
+
+            //list.poplast();
+            //list.Display();
+
+            list.MsTest(30);
             list.Display();
             Console.ReadLine();
         }
