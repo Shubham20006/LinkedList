@@ -60,6 +60,18 @@ namespace LinkedListProgram
             return head;
 
         }
+        public void pop()
+        {
+            if (head == null)
+            {
+                Console.Write("Stack is empty");
+                return;
+            }
+
+            head = (head).next;
+            Console.WriteLine("\nThe linkedlist is modified");
+
+        }
         public void Display()
         {
             Node temp=head;

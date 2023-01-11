@@ -17,6 +17,8 @@ namespace LinkedListProgram
             list.Display();
            list.InsertAtPerticularPosition(2,30);
             list.Display();
+            list.pop();
+            list.Display();
             Console.ReadLine();
         }
     }
