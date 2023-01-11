@@ -16,8 +16,9 @@ namespace LinkedListProgram
             list.Add(70);
             list.Display();
             Console.WriteLine();
-            //list.InsertAtPerticularPosition(2,30);
-            //list.Display();
+            list.InsertAtPerticularPosition(2,40);
+            list.Display();
+            Console.WriteLine();
 
             //list.poplast();
             //list.Display();

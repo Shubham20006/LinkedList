@@ -49,13 +49,14 @@ namespace LinkedListProgram
             }
             else
             {
-                while (position-- !=0 )
+                while (position-- !=0)
                 {
+                   
                     if (position == 1)
                     {
                         Node node = new Node(data);
-                        node.next = head.next;
-                        head.next = node;
+                        node.next = head.next.next;
+                        head.next.next = node;
                         break;
                     }
                     head = head.next;
@@ -63,6 +64,7 @@ namespace LinkedListProgram
 
             }
             Console.WriteLine("\nInserted value is : " + data);
+
             return head;
 
         }
@@ -110,10 +112,11 @@ namespace LinkedListProgram
 
                 if (temp.data == x)
                 {
-                    Console.WriteLine(temp.data +"==" + x+"(True)");
+                    Console.WriteLine(temp.data +"==" + x+"(True)\n");
+                    break;
                 }
              else
-                {
+                {                    
                     Console.WriteLine(temp.data + "!=" + x);
                 }
                 temp = temp.next;
