@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,47 +17,52 @@ namespace LinkedListProgram
             Node node = new Node(data);
             if (head == null)
             {
-                head= node;
+                head = node;
             }
             else
             {
                 Node temp = head;
-               while(temp.next != null)
+               
+                while (temp.next != null)
                 {
+                    ;
                     temp = temp.next;
                 }
-                temp.next = node;                
+                temp.next = node;
+
+               
             }
-            Console.WriteLine("{0} inserted into linkedlist",node.data);
+            Console.WriteLine("{0} inserted into linkedlist", node.data);
+
         }
-       public  Node InsertAtPerticularPosition(int position,int data)
+        public Node InsertAtPerticularPosition(int position, int data)
         {
             if (position < 1)
             {
                 Console.WriteLine("Invalid Position");
             }
-            if(position == 1) 
+            if (position == 1)
             {
                 var newNode = new Node(data);
                 newNode.next = head;
-                head= newNode;
+                head = newNode;
             }
             else
             {
-                while (position-- != 0)
+                while (position-- !=0 )
                 {
-                    if (position ==1)
+                    if (position == 1)
                     {
-                        Node node=new Node(data);
+                        Node node = new Node(data);
                         node.next = head.next;
-                        head.next= node;
+                        head.next = node;
                         break;
                     }
-                    head= head.next;
+                    head = head.next;
                 }
-               
+
             }
-            Console.WriteLine("\nInserted value is : "+data);
+            Console.WriteLine("\nInserted value is : " + data);
             return head;
 
         }
@@ -72,9 +78,32 @@ namespace LinkedListProgram
             Console.WriteLine("\nThe linkedlist is modified");
 
         }
+        public void poplast()
+        {
+           
+            if (head == null)
+            {
+                Console.Write("linkedlist is empty");
+                return;
+            }
+            else
+            {
+                Node temp = head;
+                while(temp.next.next !=null)
+                {                 
+                    temp = temp.next;
+                }
+                if (temp.next.next == null)
+                {
+                    temp.next = null;
+                }
+                  Console.WriteLine("\nThe linkedlist is modified");
+            }
+
+        }
         public void Display()
         {
-            Node temp=head;
+            Node temp = head;
             if (temp == null)
             {
                 Console.WriteLine("linkedlist is empty");
